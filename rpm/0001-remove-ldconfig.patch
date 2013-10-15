@@ -1,0 +1,14 @@
+diff -Naur a/liblabjackusb/Makefile b/liblabjackusb/Makefile
+--- a/liblabjackusb/Makefile	2013-10-15 14:30:14.681539695 +0000
++++ b/liblabjackusb/Makefile	2013-10-15 14:32:09.109535475 +0000
+@@ -45,10 +45,6 @@
+ 	install $(TARGET) $(DESTINATION)
+ 	test -z $(HEADER_DESTINATION) || mkdir -p $(HEADER_DESTINATION)
+ 	install $(HEADER) $(HEADER_DESTINATION)
+-ifeq ($(UNAME),Linux)
+-	@$(ADD_LDCONFIG_PATH)
+-	ldconfig
+-endif
+ 
+ clean:
+ 	rm -f $(TARGET) *.o *~

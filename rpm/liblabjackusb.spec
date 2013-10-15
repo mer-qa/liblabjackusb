@@ -4,8 +4,9 @@ Release:        1
 Summary:        LabJack I/O device driver
 Group:          Hardware/Other
 License:        MIT X11
-URL:		http://labjack.com/
+URL:            http://labjack.com/
 Source0:        %{name}-%{version}.tar.gz
+Patch0001:      0001-remove-ldconfig.patch
 BuildRequires:  libusb1-devel
 
 %description
@@ -22,6 +23,8 @@ applications that use %{name} for accessing LabJack I/O-devices.
 
 %prep
 %setup -q
+cd exodriver
+%patch0001 -p1
 
 %build
 make -C exodriver/liblabjackusb DESTINATION=%{_libdir} HEADER_DESTINATION=%{_includedir}
