@@ -46,11 +46,11 @@ test -x /sbin/udevadm && /sbin/udevadm control --reload-rules
 %files
 %defattr(-,root,root)
 %config(noreplace) %{_sysconfdir}/udev/rules.d/*
-%doc README README.setup
+%doc exodriver/README
 %{_libdir}/*.so.*
 
 %files devel
 %defattr(-,root,root)
-%doc INSTALL.Linux examples
+%doc exodriver/INSTALL.Linux exodriver/examples
 %{_includedir}/*
 %{_libdir}/*.so
