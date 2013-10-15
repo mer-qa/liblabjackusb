@@ -53,4 +53,3 @@ test -x /sbin/udevadm && /sbin/udevadm control --reload-rules
 %defattr(-,root,root)
 %doc exodriver/INSTALL.Linux exodriver/examples
 %{_includedir}/*
-%{_libdir}/*.so
